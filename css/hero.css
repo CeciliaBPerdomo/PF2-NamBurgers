@@ -90,6 +90,20 @@
     }
 }
 
+@media (max-width: 1100px) {
+    #hero {
+        & article {
+            padding: 0;
+            width: 85%;
+        }
+        
+        & picture {
+            display: none;
+        }
+    }
+
+}
+
 
 /* Animaciones */
 @keyframes slideLeft {
@@ -117,39 +131,41 @@
 }
 
 #sabores {
-  position: relative;
-  display: inline-block;
-  font-weight: 600;
-  color: #333;
-  z-index: 1;
-  overflow: hidden; /* para que el efecto no se desborde */
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
+    color: #333;
+    z-index: 1;
+    overflow: hidden;
+    /* para que el efecto no se desborde */
 }
 
 #sabores::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 0%;
-  background-color: var(--third-bg);
-  z-index: -1;
-  animation: enterExit 3s ease-out forwards;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: var(--third-bg);
+    z-index: -1;
+    animation: enterExit 3s ease-out forwards;
 }
 
 /* Animación que entra de izquierda a derecha y luego se recoge hacia la izquierda */
 @keyframes enterExit {
-  0% {
-    width: 0%;
-    left: 0;
-  }
-  50% {
-    width: 70%;
-    left: 0;
-  }
-  100% {
-    width: 0%;
-    left: 0;
-  }
-}
+    0% {
+        width: 0%;
+        left: 0;
+    }
 
+    50% {
+        width: 70%;
+        left: 0;
+    }
+
+    100% {
+        width: 0%;
+        left: 0;
+    }
+}
