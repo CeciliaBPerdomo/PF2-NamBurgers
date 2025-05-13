@@ -4,13 +4,13 @@
         "nombre": "Clásica",
         "imagen": "./img/hamburg3.png",
         "altImagen": "Clásica",
-        "precio": 270,
+        "precio": 290,
         "ingredientes": [
             "pan",
             "carne",
             "queso",
             "lechuga",
-            "tomate", 
+            "tomate",
             "cebolla"
         ],
         "categoria": "carne"
@@ -20,7 +20,7 @@
         "nombre": "Doble de carne",
         "imagen": "./img/hamburg1.png",
         "altImagen": "Doble de carne",
-        "precio": 250,
+        "precio": 320,
         "ingredientes": [
             "pan",
             "carne",
@@ -38,7 +38,7 @@
         "nombre": "Doble de queso",
         "imagen": "./img/hamburg2.png",
         "altImagen": "Doble de queso",
-        "precio": 260,
+        "precio": 320,
         "ingredientes": [
             "pan",
             "carne",
@@ -53,12 +53,15 @@
         "nombre": "Doble de bacon",
         "imagen": "./img/hamburg4.png",
         "altImagen": "Doble de bacon",
-        "precio": 270,
+        "precio": 365,
         "ingredientes": [
             "pan",
             "carne",
             "queso",
-            "bacon"
+            "bacon",
+            "tomate",
+            "lechuga",
+            "pepino"
         ],
         "categoria": "carne"
     },
@@ -67,12 +70,12 @@
         "nombre": "Triple de queso",
         "imagen": "./img/hamburg5.png",
         "altImagen": "Triple de queso",
-        "precio": 270,
+        "precio": 350,
         "ingredientes": [
             "pan",
             "carne",
             "queso",
-            "lechuga", 
+            "lechuga",
             "pepino"
         ],
         "categoria": "carne"
@@ -82,15 +85,108 @@
         "nombre": "Extra pepino",
         "imagen": "./img/hamburg6.png",
         "altImagen": "Extra pepino",
-        "precio": 270,
+        "precio": 310,
         "ingredientes": [
             "pan",
             "carne",
             "queso",
-            "lechuga", 
+            "lechuga",
             "pepino",
             "bacon"
         ],
         "categoria": "carne"
+    },
+    {
+        "id": 7,
+        "nombre": "Clásica de pollo",
+        "imagen": "./img/hamburg7.png",
+        "altImagen": "Clásica de pollo",
+        "precio": 300,
+        "ingredientes": [
+            "pan",
+            "pollo",
+            "queso",
+            "lechuga",
+            "tomate"
+        ],
+        "categoria": "pollo"
+    },
+    {
+        "id": 8,
+        "nombre": "Doble de pollo",
+        "imagen": "./img/hamburg8.png",
+        "altImagen": "Doble de pollo",
+        "precio": 350,
+        "ingredientes": [
+            "pan",
+            "pollo",
+            "queso",
+            "lechuga",
+            "tomate"
+        ],
+        "categoria": "pollo"
+    },
+    {
+        "id": 9,
+        "nombre": "Extra pepino",
+        "imagen": "./img/hamburg9.png",
+        "altImagen": "Extra pepino",
+        "precio": 310,
+        "ingredientes": [
+            "pan",
+            "pollo",
+            "queso",
+            "lechuga",
+            "tomate",
+            "pepino",
+            "cebolla"
+        ],
+        "categoria": "pollo"
+    },
+    {
+        "id": 10,
+        "nombre": "Lentejas",
+        "imagen": "./img/hamburg10.png",
+        "altImagen": "Lentejas",
+        "precio": 330,
+        "ingredientes": [
+            "pan",
+            "lentejas",
+            "rúcula",
+            "tomate",
+            "cebolla"
+        ],
+        "categoria": "veggie"
+    },
+    {
+        "id": 11,
+        "nombre": "Garbanzos",
+        "imagen": "./img/hamburg11.png",
+        "altImagen": "Garbanzos",
+        "precio": 320,
+        "ingredientes": [
+            "pan",
+            "garbanzos",
+            "lechuga",
+            "tomate",
+            "cebolla",
+            "queso"
+        ],
+        "categoria": "veggie"
+    },
+    {
+        "id": 12,
+        "nombre": "Remolacha",
+        "imagen": "./img/hamburg12.png",
+        "altImagen": "Remolacha",
+        "precio": 320,
+        "ingredientes": [
+            "pan",
+            "remolacha",
+            "lechuga",
+            "tomate",
+            "rúcula"
+        ],
+        "categoria": "veggie"
     }
 ]

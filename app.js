@@ -26,7 +26,6 @@ const mostrarProductos = () => {
     lista.forEach((producto) => listProducts.append(tarjetaProducto(producto)))
 }
 
-
 // Muestra las tarjetas de los productos
 const tarjetaProducto = (producto) => {
     const { id, nombre, imagen, altImagen,precio, ingredientes, categoria } = producto
@@ -65,8 +64,8 @@ const tarjetaProducto = (producto) => {
 const verMas = (e) => {
     e.preventDefault()
     page += 1
-    if (page == 5) {
-        page = 5
+    if (page == 4) {
+        page = 4
         btnMore.style.display = "none"
     }
     mostrarProductos()
