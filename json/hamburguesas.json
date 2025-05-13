@@ -1,0 +1,96 @@
+[
+    {
+        "id": 1,
+        "nombre": "Clásica",
+        "imagen": "./img/hamburg3.png",
+        "altImagen": "Clásica",
+        "precio": 270,
+        "ingredientes": [
+            "pan",
+            "carne",
+            "queso",
+            "lechuga",
+            "tomate", 
+            "cebolla"
+        ],
+        "categoria": "carne"
+    },
+    {
+        "id": 2,
+        "nombre": "Doble de carne",
+        "imagen": "./img/hamburg1.png",
+        "altImagen": "Doble de carne",
+        "precio": 250,
+        "ingredientes": [
+            "pan",
+            "carne",
+            "queso",
+            "lechuga",
+            "tomate",
+            "pepino",
+            "cebolla",
+            "bacon"
+        ],
+        "categoria": "carne"
+    },
+    {
+        "id": 3,
+        "nombre": "Doble de queso",
+        "imagen": "./img/hamburg2.png",
+        "altImagen": "Doble de queso",
+        "precio": 260,
+        "ingredientes": [
+            "pan",
+            "carne",
+            "queso",
+            "bacon",
+            "pepino"
+        ],
+        "categoria": "carne"
+    },
+    {
+        "id": 4,
+        "nombre": "Doble de bacon",
+        "imagen": "./img/hamburg4.png",
+        "altImagen": "Doble de bacon",
+        "precio": 270,
+        "ingredientes": [
+            "pan",
+            "carne",
+            "queso",
+            "bacon"
+        ],
+        "categoria": "carne"
+    },
+    {
+        "id": 5,
+        "nombre": "Triple de queso",
+        "imagen": "./img/hamburg5.png",
+        "altImagen": "Triple de queso",
+        "precio": 270,
+        "ingredientes": [
+            "pan",
+            "carne",
+            "queso",
+            "lechuga", 
+            "pepino"
+        ],
+        "categoria": "carne"
+    },
+    {
+        "id": 6,
+        "nombre": "Extra pepino",
+        "imagen": "./img/hamburg6.png",
+        "altImagen": "Extra pepino",
+        "precio": 270,
+        "ingredientes": [
+            "pan",
+            "carne",
+            "queso",
+            "lechuga", 
+            "pepino",
+            "bacon"
+        ],
+        "categoria": "carne"
+    }
+]

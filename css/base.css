@@ -1,54 +1,55 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+HR+Lijeva:wght@100..400&display=swap');
 
 :root {
-    --first-bg: #FBEAA5;
-    --second-bg: #FFFCDD; /*y cuarto*/
-    --third-bg: #FBE27D;
-    --title: #A40D0C;
-    --botones: #900606;
+  --first-bg: #FBEAA5;
+  --second-bg: #FFFCDD;
+  --third-bg: #FBE27D;
+  --title: #A40D0C;
+  --botones: #900606;
+  --botones-sec: #ff6347;
 }
 
-* { 
-    margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
 
-  body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  html { 
-    scrollbar-width: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--second-bg);
-    scroll-behavior: smooth;
-    scroll-padding-top: 4rem;
-    scroll-snap-type: y proximity;
-  }
+html {
+  scrollbar-width: none;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--second-bg);
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+  scroll-snap-type: y proximity;
+}
 
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 
-  a {
-    text-decoration: none;
-  }
+a {
+  text-decoration: none;
+}
 
-  label { 
-    cursor: pointer;
-  }
+label {
+  cursor: pointer;
+}
 
-  button {
-    cursor: pointer;
-  }
+button {
+  cursor: pointer;
+}

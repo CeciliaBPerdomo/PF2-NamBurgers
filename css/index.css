@@ -3,3 +3,6 @@
 
 /* Hero */
 @import url('./hero.css');
+
+/*Productos */
+@import url("./productos.css");
