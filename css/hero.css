@@ -30,6 +30,7 @@
             border-radius: 1.5rem;
             border: 0.1rem solid var(--botones-sec);
             background-color: transparent;
+            text-decoration: none;
 
             & svg {
                 width: 13px;

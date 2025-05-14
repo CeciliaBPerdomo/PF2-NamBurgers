@@ -2,7 +2,7 @@
     {
         "id": 1,
         "nombre": "Clásica",
-        "imagen": "./img/hamburg3.png",
+        "imagen": "./img/hamburg3.webp",
         "altImagen": "Clásica",
         "precio": 290,
         "ingredientes": [
@@ -18,7 +18,7 @@
     {
         "id": 2,
         "nombre": "Doble de carne",
-        "imagen": "./img/hamburg1.png",
+        "imagen": "./img/hamburg1.webp",
         "altImagen": "Doble de carne",
         "precio": 320,
         "ingredientes": [
@@ -36,7 +36,7 @@
     {
         "id": 3,
         "nombre": "Doble de queso",
-        "imagen": "./img/hamburg2.png",
+        "imagen": "./img/hamburg2.webp",
         "altImagen": "Doble de queso",
         "precio": 320,
         "ingredientes": [
@@ -51,7 +51,7 @@
     {
         "id": 4,
         "nombre": "Doble de bacon",
-        "imagen": "./img/hamburg4.png",
+        "imagen": "./img/hamburg4.webp",
         "altImagen": "Doble de bacon",
         "precio": 365,
         "ingredientes": [
@@ -68,7 +68,7 @@
     {
         "id": 5,
         "nombre": "Triple de queso",
-        "imagen": "./img/hamburg5.png",
+        "imagen": "./img/hamburg5.webp",
         "altImagen": "Triple de queso",
         "precio": 350,
         "ingredientes": [
@@ -83,7 +83,7 @@
     {
         "id": 6,
         "nombre": "Extra pepino",
-        "imagen": "./img/hamburg6.png",
+        "imagen": "./img/hamburg6.webp",
         "altImagen": "Extra pepino",
         "precio": 310,
         "ingredientes": [
@@ -99,7 +99,7 @@
     {
         "id": 7,
         "nombre": "Clásica de pollo",
-        "imagen": "./img/hamburg7.png",
+        "imagen": "./img/hamburg7.webp",
         "altImagen": "Clásica de pollo",
         "precio": 300,
         "ingredientes": [
@@ -114,7 +114,7 @@
     {
         "id": 8,
         "nombre": "Doble de pollo",
-        "imagen": "./img/hamburg8.png",
+        "imagen": "./img/hamburg8.webp",
         "altImagen": "Doble de pollo",
         "precio": 350,
         "ingredientes": [
@@ -129,7 +129,7 @@
     {
         "id": 9,
         "nombre": "Extra pepino",
-        "imagen": "./img/hamburg9.png",
+        "imagen": "./img/hamburg9.webp",
         "altImagen": "Extra pepino",
         "precio": 310,
         "ingredientes": [
@@ -146,7 +146,7 @@
     {
         "id": 10,
         "nombre": "Lentejas",
-        "imagen": "./img/hamburg10.png",
+        "imagen": "./img/hamburg10.webp",
         "altImagen": "Lentejas",
         "precio": 330,
         "ingredientes": [
@@ -161,7 +161,7 @@
     {
         "id": 11,
         "nombre": "Garbanzos",
-        "imagen": "./img/hamburg11.png",
+        "imagen": "./img/hamburg11.webp",
         "altImagen": "Garbanzos",
         "precio": 320,
         "ingredientes": [
@@ -177,7 +177,7 @@
     {
         "id": 12,
         "nombre": "Remolacha",
-        "imagen": "./img/hamburg12.png",
+        "imagen": "./img/hamburg12.webp",
         "altImagen": "Remolacha",
         "precio": 320,
         "ingredientes": [
