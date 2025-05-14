@@ -2,13 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+HR+Lijeva:wght@100..400&display=swap');
 
 :root {
+  /* fondos */
   --first-bg: #FBEAA5;
   --second-bg: #FFFCDD;
   --third-bg: #FBE27D;
+
+  /* textos */
   --title: #A40D0C;
+  --text-primary: black;
+  --text-secondary: #ff5722;
+
+  /* botones */
   --botones: #900606;
   --botones-sec: #ff6347;
-  --text-primary: black;
+  --botones-sec-hover: #cc5038;
 }
 
 * {

@@ -21,7 +21,7 @@
     }
 
     &>ul>li {
-        background-color: var(--third-bg, #ffe173);
+        background-color: var(--third-bg);
         border-radius: 1.25rem;
         padding: 1.5rem;
         width: 280px;
@@ -29,7 +29,7 @@
         flex-direction: column;
         align-items: center;
         transition: transform 0.3s ease;
-        cursor: default;
+        cursor: pointer;
     }
 
     &>ul>li:hover {
@@ -65,7 +65,7 @@
 
     &>ul>li>ul>li {
         text-align: center;
-        color: var(--text-black, #333);
+        color: var(--text-primary);
         font-size: 1rem;
         margin: 0;
     }
@@ -73,13 +73,13 @@
     &>ul>li>ul>li.info h3 {
         font-size: 1.4rem;
         font-weight: 700;
-        color: var(--primary-text, #222);
+        color: var(--text-primary);
         margin: 0;
     }
 
     &>ul>li>ul>li.info p {
         font-size: 1rem;
-        color: var(--price-color, #ff5722);
+        color: var(--text-secondary);
         margin: 0.25rem 0 0;
         font-weight: 600;
     }
@@ -87,7 +87,7 @@
 
     &>ul>li>ul>li.ingredientes dd {
         font-size: 0.9rem;
-        color: var(--text-gray, #666);
+        color:  #666;
         margin: 0;
         word-wrap: break-word;
         overflow-wrap: break-word;
@@ -119,7 +119,7 @@
     }
 
     &>ul>li>ul>li.cart form button:hover {
-        background-color: var(--primary-dark, #cc5038);
+        background-color: var(--botones-sec-hover);
     }
 }
 
@@ -131,7 +131,7 @@
 
 
     & button {
-        background-color: var(--botones-sec, #f57c00);
+        background-color: var(--botones-sec);
         color: #fff;
         border: none;
         padding: 0.8rem 2rem;
@@ -143,6 +143,6 @@
     }
 
     & button:hover {
-        background-color: var(--primary-dark, #cc5038);
+        background-color: var(--botones-sec-hover);
     }
 }

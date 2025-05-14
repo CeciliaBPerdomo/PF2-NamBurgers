@@ -1,9 +1,10 @@
 #products {
     & header {
-        & h2{
+        & h2 {
             text-align: center;
             padding: 1rem;
         }
+
         & form {
             width: 110%;
             display: flex;
@@ -27,6 +28,11 @@
                 justify-content: center;
                 align-items: center;
                 gap: 1rem;
+
+                &:hover {
+                    background-color: var(--first-bg);
+                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+                }
             }
 
             & label.active {
