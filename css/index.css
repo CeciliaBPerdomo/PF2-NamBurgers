@@ -1,9 +1,16 @@
 /* Base */
 @import url('./base.css');
 
+/* Navbar */
+@import url('./navbar.css');
+
 /* Hero */
 @import url('./hero.css');
 
 /*Productos */
 @import url("./productos.css");
 @import url("./filtros.css");
+
+/* About us */
+/* Contacto */
+/* Footer */

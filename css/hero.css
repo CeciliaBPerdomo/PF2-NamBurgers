@@ -1,12 +1,12 @@
 #hero {
     width: 100%;
-    margin-top: 6rem;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
     align-content: center;
     background-color: var(--first-bg);
+    height: 100dvh;
 
     & article {
         width: 50%;
