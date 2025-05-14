@@ -1,0 +1,26 @@
+[
+  {
+    "id": "todas",
+    "value": "todas",
+    "label": "🍔 Todas",
+    "active": true
+  },
+  {
+    "id": "carne",
+    "value": "carne",
+    "label": "🥩 Carne",
+    "active": false
+  },
+  {
+    "id": "pollo",
+    "value": "pollo",
+    "label": "🍗 Pollo",
+    "active": false
+  },
+  {
+    "id": "veggie",
+    "value": "veggie",
+    "label": "🥬 Veggie",
+    "active": false
+  }
+]

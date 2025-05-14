@@ -1,7 +1,7 @@
 
 <h2 align="center"><b>ÑamBurgers 🍔</b></h2>
 <p align="center"><img src="myAvatar.png" width="25%"></p>
-<p align="center">By 💛<b>Cecilia Perdomo<b> 💛</p>
+<p align="center">By 💛<b>Cecilia Perdomo</b> 💛</p>
 
 # Proyecto Integrador | Javascript
 -  La temática es un E-commerce. Deberá ser una página para una empresa que venda algún producto o grupo de productos y/o servicios.
