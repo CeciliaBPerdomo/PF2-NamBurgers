@@ -96,17 +96,22 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     #hero {
+        width: 100%;
         display: flex;
         justify-content: flex-start;
         align-content: flex-start;
         
-        padding: 2rem 0.5rem;
-        
-        & article {
-            width: 100%;
+        padding: 0.5rem 0.5rem;
 
+        & article {
+            width: 75%;
+
+            & a:first-child {
+                align-self: center;
+            }
+            
             & h1 {
                 font-size: 2rem;
             }
@@ -124,7 +129,7 @@
     }
 }
 
-@media (max-width: 1100px) {
+@media (min-width: 769px) and (max-width: 1100px)  {
     #hero {
         & article {
             padding: 1rem;
