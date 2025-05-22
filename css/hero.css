@@ -99,11 +99,12 @@
 @media (max-width: 768px) {
     #hero {
         width: 100%;
+        height: auto;
         display: flex;
         justify-content: flex-start;
         align-content: flex-start;
         
-        padding: 0.5rem 0.5rem;
+        padding: 1.25rem 0.5rem;
 
         & article {
             width: 75%;
@@ -111,7 +112,7 @@
             & a:first-child {
                 align-self: center;
             }
-            
+
             & h1 {
                 font-size: 2rem;
             }
@@ -125,6 +126,10 @@
                 width: 100%;
                 font-size: 0.95rem;
             }
+        }
+
+         & #card-hero {
+            display: none;
         }
     }
 }
