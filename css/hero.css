@@ -111,6 +111,7 @@
 
             & a:first-child {
                 align-self: center;
+                margin-bottom: 0.5rem;
             }
 
             & h1 {
