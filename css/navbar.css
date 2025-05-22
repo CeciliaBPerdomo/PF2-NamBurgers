@@ -1,4 +1,4 @@
-#navbar {
+#header {
     width: 100vw;
     display: flex;
     background-color: var(--second-bg);
@@ -13,14 +13,14 @@
     left: 0;
     z-index: 9;
 
-    & > a {
+    &>a {
         color: var(--title);
         font-family: "Playwrite HR Lijeva", cursive;
         font-size: 1.75rem;
         text-decoration: none;
     }
 
-    & nav {
+    & #navbar {
         display: flex;
         gap: 1rem;
 
@@ -30,58 +30,184 @@
             position: relative;
             padding: 0.25rem 0;
             transition: color 0.3s ease;
-
-            &::after {
-                content: "";
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                height: 0.1rem;
-                background-color: var(--text-white);
-                transform: scaleX(0);
-                transform-origin: left;
-                transition: transform 0.3s ease;
-            }
-
-            &:hover {
-                color: var(--text-white);
-            }
-
-            &:hover::after {
-                transform: scaleX(1);
-            }
         }
+
+        & a::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0.1rem;
+            background-color: var(--text-white);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        & a:hover {
+            color: var(--text-white);
+        }
+
+        & a:hover::after {
+            transform: scaleX(1);
+        }
+
     }
 
-    & form {
+    & #navbar-right {
         display: flex;
         gap: 1rem;
         align-items: center;
 
-        & label {
-            cursor: pointer;
-            width: 2rem;
-            height: 2rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: transform 0.3s ease, filter 0.3s ease;
-
-            & svg {
-                fill: var(--text-white);
-                width: 100%;
-                height: 100%;
+        & section {
+            & a {
+                text-decoration: none;
+                color: black;
+                font-weight: 400;
+                transition: all 250ms ease-in-out;
             }
 
-            &:hover {
-                transform: scale(1.1);
-                filter: brightness(1.2);
+            & a:hover,
+            & a:active {
+                color: var(--text-white);
             }
         }
 
-        & input[type="checkbox"] {
-            display: none;
+        & #navbar-icons {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+
+            & #btnMenu {
+                display: none;
+            }
+
+            & button {
+                cursor: pointer;
+                width: 2rem;
+                height: 2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: transparent;
+                border: 0.1rem solid transparent;
+                transition: transform 0.3s ease, filter 0.3s ease;
+
+                & svg {
+                    fill: var(--text-white);
+                    width: 100%;
+                    height: 100%;
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                    filter: brightness(1.2);
+                }
+            }
+        }
+    }
+}
+
+
+body::before {
+    content: "";
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    background-color: rgba(252, 252, 252, 0.4);
+    backdrop-filter: blur(0.025rem);
+    display: none;
+}
+
+body:has(#navbar.active)::before,
+body:has(#cart.active)::before {
+    display: flex;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1032px) {
+    #btnMenu {
+        display: flex !important;
+    }
+
+    #header {
+        display: block;
+
+        & #navbar {
+            position: fixed;
+            top: 5rem;
+            right: 1rem;
+            left: auto;
+            transform: translateX(100%) translateY(-100vh);
+
+            width: 75%;
+            max-width: 300px;
+            flex-direction: column;
+            padding: 1rem 2rem 2rem;
+            background-color: var(--third-bg);
+            border: 0.1rem solid var(--electric);
+            border-top: 0;
+            border-radius: 0 0 1rem 1rem;
+            z-index: 9;
+            gap: 1rem;
+            transition: transform 300ms ease;
+
+            &.active {
+                transform: translateX(0) translateY(0);
+            }
+
+            & a {
+                color: var(--text-gray);
+                font-weight: 400;
+                transition: all 250ms ease-in-out;
+            }
+
+            & a:hover,
+            a:active {
+                color: var(--text-white);
+            }
+
+        }
+
+        & #navbar-right {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 1rem;
+
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 5rem;
+            background-color: var(--nav-bg);
+            border-bottom: 0.1rem solid var(--electric);
+            z-index: 9;
+            padding: 1rem 2rem;
+            gap: 1rem;
+
+            & section {
+                display: flex;
+
+                & #navbar-icons {
+                    flex: 1;
+                    flex-direction: row-reverse;
+                    justify-content: flex-start;
+                }
+
+                & a {
+                    text-decoration: none;
+                    padding: 0 0.35rem;
+                    color: var(--text-gray);
+                    font-weight: 400;
+                    transition: all 250ms ease-in-out;
+                }
+            }
+
         }
     }
 }
