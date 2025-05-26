@@ -4,8 +4,6 @@ import { leerCategoria, mostrarCategorias, setearFiltros } from "./js/categorias
 var catalogo = []
 var categoria = []
 
-// Elementos del DOM
-
 // Productos
 const btnMore = document.querySelector("#btnMore")
 
