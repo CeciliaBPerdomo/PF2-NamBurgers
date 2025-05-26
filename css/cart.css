@@ -15,7 +15,7 @@
 
     & header {
         width: 100%;
-        color: var(--text-white);
+        color: var(--text-primary);
         display: flex;
         justify-content: space-between;
         padding: 0 0.25rem;
@@ -29,9 +29,7 @@
                 aspect-ratio: 1/1;
                 width: 2rem;
                 background-color: transparent;
-                border-radius: 0.25rem;
-                border: 0.1rem solid var(--electric);
-                color: var(--text-white);
+                color: var(--botones);
                 font-weight: 800;
                 display: flex;
                 flex-direction: column;
@@ -51,14 +49,13 @@
         scrollbar-width: none;
 
         & li {
-            border: 0.2rem solid var(--electric);
+
             display: flex;
             align-items: center;
             padding: 0.25rem;
-            border-radius: 1rem;
 
             & picture {
-                height: 6rem;
+                height: 5.5rem;
             }
 
             & dl {
@@ -69,21 +66,13 @@
                 padding: 0.25rem;
 
                 & dd:nth-child(1) {
-                    color: var(--text-white);
+                    color: var(--text-secondary);
                     font-weight: 800;
                 }
 
                 & dd:nth-child(2) {
-                    color: var(--text-gray);
+                    color: var(--text-primary);
                     font-weight: 100;
-                }
-
-                & dd:nth-child(3) {
-                    color: transparent;
-                    background: linear-gradient(to right, #30cfd0, #c43ad6 50%);
-                    background-clip: text;
-                    font-weight: 800;
-                    text-transform: uppercase;
                 }
 
             }
@@ -99,9 +88,7 @@
                     aspect-ratio: 1/1;
                     width: 2rem;
                     background-color: transparent;
-                    border-radius: 0.25rem;
-                    border: 0.1rem solid var(--electric);
-                    color: var(--text-white);
+                    color: var(--text-primary);
                     font-weight: 800;
                     display: flex;
                     flex-direction: column;
@@ -110,13 +97,19 @@
                 }
 
                 & output {
-                    color: var(--text-white);
+                    color: var(--text-primary);
                     font-weight: 800;
                 }
             }
 
         }
     }
+
+    & #divider {
+        width: 100%;
+        border: 0.05rem solid var(--botones);
+    }
+
 
     & footer {
         width: 100%;
@@ -127,7 +120,7 @@
 
         & dl {
             flex: 1;
-            color: var(--text-white);
+            color: var(--text-primary);
             text-align: center;
 
             & dt {
@@ -136,7 +129,7 @@
 
             & dd {
                 color: transparent;
-                background: linear-gradient(to right, #30cfd0, #c43ad6 60%);
+                background: var(--title);
                 background-clip: text;
                 font-weight: 800;
                 text-transform: uppercase;

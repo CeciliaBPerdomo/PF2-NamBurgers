@@ -1,14 +1,19 @@
+import { leerArchivo } from "./productos.js"
 var carrito = JSON.parse(localStorage.getItem('carrito')) || []
 
 // Carrito
-const cart = document.querySelector("#cart")
 const listCart = document.querySelector("#cart > ul")
 const btnRemoveAll = document.querySelector("#btnRemoveAll")
 const subTotalCart = document.querySelector("#subtotal")
 const shippingCart = document.querySelector("#envio")
 const totalCart = document.querySelector("#total")
 
-export const agregarProducto = (id, catalogo) => {
+
+export const agregarProducto = async (id, catalogo) => {
+    if (!catalogo) {
+       catalogo = await leerArchivo()
+    }
+
     const producto = catalogo.find((p) => p.id == id)
     if (carrito.length == 0) {
         carrito.push({ ...producto, cantidad: 1 })
@@ -20,7 +25,7 @@ export const agregarProducto = (id, catalogo) => {
     if (!exist) {
         carrito.push({ ...producto, cantidad: 1 })
         localStorage.setItem("carrito", JSON.stringify(carrito))
-        return mostrarCarrito()
+        return mostrarCarrito(catalogo)
     }
     carrito = carrito.map((item) => {
         if (item.id == id) {
@@ -29,10 +34,10 @@ export const agregarProducto = (id, catalogo) => {
         return item
     })
     localStorage.setItem("carrito", JSON.stringify(carrito))
-    return mostrarCarrito()
+    return mostrarCarrito(catalogo)
 }
 
-export const mostrarCarrito = () => {
+export const mostrarCarrito = (catalogo) => {
     carrito = JSON.parse(localStorage.getItem('carrito')) || []
     listCart.innerHTML = null
 
@@ -41,10 +46,10 @@ export const mostrarCarrito = () => {
     shippingCart.innerHTML = `$ ${subTotal > 1000 ? "Free" : `${Number(subTotal * 0.2).toFixed(2)}`}`
     totalCart.innerHTML = subTotal > 1000 ? `$ ${Number(subTotal).toFixed(2)}` : `$ ${Number(subTotal + (subTotal * 0.2)).toFixed(2)}`
 
-    carrito.forEach((i) => listCart.append(item(i)))
+    carrito.forEach((i) => listCart.append(item(i, catalogo)))
 }
 
-const item = (item) => {
+const item = (item, catalogo) => {
     const element = document.createElement("li")
     let template = `<picture><img src="${item.imagen}" alt=""></picture>`
     template += `<dl><dd>${item.nombre}</dd><dd>Precio: $ ${Number(item.precio * item.cantidad).toFixed(2)}</dd></dl>`
@@ -72,7 +77,7 @@ const item = (item) => {
 
     btnAdd.addEventListener("click", (e) => {
         e.preventDefault()
-        agregarProducto(item.id)
+        agregarProducto(item.id, catalogo)
     })
 
     btnRemove.addEventListener("click", (e) => {
@@ -110,3 +115,11 @@ const vaciarCarrito = () => {
     localStorage.removeItem("carrito")
     return mostrarCarrito()
 }
+
+btnRemoveAll.addEventListener("click", (e) => {
+    e.preventDefault()
+    let empty = confirm('Estas seguro de borrar todos los productos del carrito?')
+    if (empty) {
+        vaciarCarrito()
+    }
+})

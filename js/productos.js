@@ -1,9 +1,5 @@
 import { agregarProducto } from "./carrito.js"
-
-var carrito = JSON.parse(localStorage.getItem('carrito')) || []
-var filtro = null
 var page = 1
-var catalogoProductos = []
 
 /* DOM */
 const listProducts = document.querySelector("#products > ul")
@@ -16,24 +12,22 @@ export const leerArchivo = async () => {
 
 // Mostrar los productos
 export const mostrarProductos = (catalogo, filtro) => {
-catalogoProductos = catalogo
     let lista = []
     if (filtro == null) {
         // muestra los 3 primeros
         lista = catalogo.slice(0, page * 3)
     } else if (filtro == "todas") {
-        console.log("todas")
         lista = catalogo.slice(0, page * 3)
     } else {
         lista = catalogo.filter((producto) => producto.categoria == filtro)
     }
 
     listProducts.innerHTML = ""
-    lista.forEach((producto) => listProducts.append(tarjetaProducto(producto)))
+    lista.forEach((producto) => listProducts.append(tarjetaProducto(producto, catalogo)))
 }
 
 // Muestra las tarjetas de los productos
-const tarjetaProducto = (producto) => {
+const tarjetaProducto = (producto, catalogoProductos) => {
     const { id, nombre, imagen, altImagen, precio, ingredientes, categoria } = producto
     const elemento = document.createElement("li")
     const dataElemento = document.createElement("ul")
