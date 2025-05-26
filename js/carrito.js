@@ -7,11 +7,11 @@ const btnRemoveAll = document.querySelector("#btnRemoveAll")
 const subTotalCart = document.querySelector("#subtotal")
 const shippingCart = document.querySelector("#envio")
 const totalCart = document.querySelector("#total")
-
+const cartTotals = document.querySelector("#cartTotals");
 
 export const agregarProducto = async (id, catalogo) => {
     if (!catalogo) {
-       catalogo = await leerArchivo()
+        catalogo = await leerArchivo()
     }
 
     const producto = catalogo.find((p) => p.id == id)
@@ -41,12 +41,25 @@ export const mostrarCarrito = (catalogo) => {
     carrito = JSON.parse(localStorage.getItem('carrito')) || []
     listCart.innerHTML = null
 
-    let subTotal = carrito.reduce((a, i) => (a += i.precio * i.cantidad), 0)
-    subTotalCart.innerHTML = `$ ${Number(subTotal).toFixed(2)}`
-    shippingCart.innerHTML = `$ ${subTotal > 1000 ? "Free" : `${Number(subTotal * 0.2).toFixed(2)}`}`
-    totalCart.innerHTML = subTotal > 1000 ? `$ ${Number(subTotal).toFixed(2)}` : `$ ${Number(subTotal + (subTotal * 0.2)).toFixed(2)}`
+    if (carrito.length === 0) {
+        listCart.innerHTML += `
+         <li style="text-align:start; padding:1rem; color:#555;">
+            <section style="display: flex; flex-direction: column">
+                <p>No hay ninguna hamburguesa pedida 🍔</p>
+                <p>¿Qué estás esperando para comer? 🤤</p>
+            </section>
+        </li>
+    `;
+    cartTotals.style.display = "none";
+    } else {
+        cartTotals.style.display = "flex"; 
+        let subTotal = carrito.reduce((a, i) => (a += i.precio * i.cantidad), 0)
+        subTotalCart.innerHTML = `$ ${Number(subTotal).toFixed(2)}`
+        shippingCart.innerHTML = `$ ${subTotal > 1000 ? "Free" : `${Number(subTotal * 0.2).toFixed(2)}`}`
+        totalCart.innerHTML = subTotal > 1000 ? `$ ${Number(subTotal).toFixed(2)}` : `$ ${Number(subTotal + (subTotal * 0.2)).toFixed(2)}`
 
-    carrito.forEach((i) => listCart.append(item(i, catalogo)))
+        carrito.forEach((i) => listCart.append(item(i, catalogo)))
+    }
 }
 
 const item = (item, catalogo) => {
