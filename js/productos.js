@@ -1,6 +1,9 @@
+import { agregarProducto } from "./carrito.js"
+
 var carrito = JSON.parse(localStorage.getItem('carrito')) || []
 var filtro = null
 var page = 1
+var catalogoProductos = []
 
 /* DOM */
 const listProducts = document.querySelector("#products > ul")
@@ -13,6 +16,7 @@ export const leerArchivo = async () => {
 
 // Mostrar los productos
 export const mostrarProductos = (catalogo, filtro) => {
+catalogoProductos = catalogo
     let lista = []
     if (filtro == null) {
         // muestra los 3 primeros
@@ -51,7 +55,7 @@ const tarjetaProducto = (producto) => {
 
     carritoForm.addEventListener("submit", (e) => {
         e.preventDefault();
-        // Acá agregamos el producto al carrito (TODO)
+        agregarProducto(id, catalogoProductos)
     });
 
     carritoForm.append(carritoButton)

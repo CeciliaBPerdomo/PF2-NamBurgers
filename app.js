@@ -1,5 +1,6 @@
 import { leerArchivo, mostrarProductos, verMas } from "./js/productos.js"
 import { leerCategoria, mostrarCategorias, setearFiltros } from "./js/categorias.js"
+import { mostrarCarrito } from "./js/carrito.js"
 
 var catalogo = []
 var categoria = []
@@ -53,3 +54,6 @@ btnCarrito.addEventListener("click", (e) => {
         cart.classList.add("active");
     }
 })
+
+
+mostrarCarrito()

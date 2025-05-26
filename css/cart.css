@@ -9,7 +9,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
-    width: 25vw;
+    width: 30vw;
     transform: translateX(100%);
     transition: all 250ms ease-out;
 
@@ -56,9 +56,93 @@
             align-items: center;
             padding: 0.25rem;
             border-radius: 1rem;
+
+            & picture {
+                height: 6rem;
+            }
+
+            & dl {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 0.25rem;
+                padding: 0.25rem;
+
+                & dd:nth-child(1) {
+                    color: var(--text-white);
+                    font-weight: 800;
+                }
+
+                & dd:nth-child(2) {
+                    color: var(--text-gray);
+                    font-weight: 100;
+                }
+
+                & dd:nth-child(3) {
+                    color: transparent;
+                    background: linear-gradient(to right, #30cfd0, #c43ad6 50%);
+                    background-clip: text;
+                    font-weight: 800;
+                    text-transform: uppercase;
+                }
+
+            }
+
+            & fieldset {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                justify-content: center;
+                align-content: center;
+
+                & button {
+                    aspect-ratio: 1/1;
+                    width: 2rem;
+                    background-color: transparent;
+                    border-radius: 0.25rem;
+                    border: 0.1rem solid var(--electric);
+                    color: var(--text-white);
+                    font-weight: 800;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                & output {
+                    color: var(--text-white);
+                    font-weight: 800;
+                }
+            }
+
         }
     }
 
+    & footer {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+        align-items: center;
+
+        & dl {
+            flex: 1;
+            color: var(--text-white);
+            text-align: center;
+
+            & dt {
+                font-weight: 700;
+            }
+
+            & dd {
+                color: transparent;
+                background: linear-gradient(to right, #30cfd0, #c43ad6 60%);
+                background-clip: text;
+                font-weight: 800;
+                text-transform: uppercase;
+            }
+        }
+    }
 }
 
 #cart.active {
