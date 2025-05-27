@@ -45,6 +45,7 @@ btnMenu.addEventListener("click", (e) => {
     }
 });
 
+// Carrito
 btnCarrito.addEventListener("click", (e) => {
     e.preventDefault();
     navbar.classList.remove("active");

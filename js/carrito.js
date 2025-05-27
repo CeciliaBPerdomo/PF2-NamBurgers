@@ -46,7 +46,7 @@ export const mostrarCarrito = (catalogo) => {
          <li style="text-align:start; padding:1rem; color:#555;">
             <section style="display: flex; flex-direction: column">
                 <p>No hay ninguna hamburguesa pedida 🍔</p>
-                <p>¿Qué estás esperando para comer? 🤤</p>
+                <p>¿Qué estás esperando para vivir está experiencia de sabor? 🤤</p>
             </section>
         </li>
     `;
@@ -131,7 +131,7 @@ const vaciarCarrito = () => {
 
 btnRemoveAll.addEventListener("click", (e) => {
     e.preventDefault()
-    let empty = confirm('Estas seguro de borrar todos los productos del carrito?')
+    let empty = confirm('Estas seguro de borrar tú pedido de hamburguesas?')
     if (empty) {
         vaciarCarrito()
     }
