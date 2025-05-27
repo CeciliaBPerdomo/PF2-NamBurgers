@@ -1,0 +1,84 @@
+#contacto {
+    width: 85%;
+    border: 0.1rem solid var(--third-bg);
+    border-radius: 1.5rem;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    margin-bottom: 1rem;
+    margin-top: 6rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+
+    & header {
+        display: flex;
+        padding-top: 1rem;
+
+        & h3 {
+            text-align: center;
+            align-self: center;
+            font-size: 1.5rem;
+        }
+    }
+
+}
+
+#formulario {
+    width: 60%;
+    text-align: center;
+    padding: 0.5rem;
+
+    & input {
+        width: 100%;
+        background-color: transparent;
+        padding: 0.5rem;
+        margin-top: 1rem;
+        border-radius: 0.5rem;
+        border: 1px solid var(--first-bg);
+        margin-left: 2rem;
+    }
+
+    & textarea {
+        width: 100%;
+        background-color: transparent;
+        padding: 0.5rem;
+        margin-top: 1rem;
+        border-radius: 0.5rem;
+        border: 1px solid var(--first-bg);
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    & button {
+        width: 15rem;
+        text-align: center;
+        padding: 0.5rem 2rem;
+        border-radius: 0.75rem;
+        background-color: var(--botones-sec);
+        color: var(--text-botones);
+        font-weight: 600;
+        font-size: 1.1rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        margin: auto;
+        margin-bottom: 1rem;
+        transition: transform 0.3s ease, fill 0.3s ease;
+
+        & svg {
+            width: 8%;
+        }
+
+        &:hover {
+            background-color: var(--botones-sec-hover);
+            transform: scale(1.1);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    }
+}

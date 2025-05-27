@@ -132,7 +132,7 @@
 
     & button {
         background-color: var(--botones-sec);
-        color: #fff;
+        color: var(--text-botones);
         border: none;
         padding: 0.8rem 2rem;
         border-radius: 0.75rem;
