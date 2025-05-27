@@ -197,19 +197,31 @@
     <!-- Contacto -->
     <section id="contacto">
         <header>
-            <h3>Contactanos</h3>
+            <h2>Contactanos</h2>
         </header>
 
         <section id="contact-form">
             <article>
-              <p>¿Tenés alguna consulta, sugerencia o simplemente querés decirnos lo mucho que te gustan nuestras
-                hamburguesas? </p>
-            <p>¡Nos encantaría saber de vos!</p>
+                <p>¿Tenés alguna consulta, sugerencia o simplemente querés decirnos lo mucho que te gustan nuestras
+                    hamburguesas? </p>
+                <p>¡Nos encantaría saber de vos!</p>
             </article>
             <form id="formulario">
-                <input type="text" placeholder="Tu nombre y apellido">
-                <input type="text" placeholder="Tu correo electrónico">
-                <textarea rows="4" placeholder="Tu mensaje"></textarea>
+                <fieldset>
+                    <input type="text" id="name" placeholder="Tu nombre y apellido">
+                    <output id="feedbackName"></output>
+                </fieldset>
+
+                <fieldset>
+                    <input type="email" id="email" placeholder="Tu correo electrónico">
+                    <output id="feedbackEmail"></output>
+                </fieldset>
+
+                <fieldset>
+                    <textarea rows="4" id="mensaje" placeholder="Tu mensaje"></textarea>
+                    <output id="feedbackMensaje"></output>
+                </fieldset>
+                
                 <button>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                         <path

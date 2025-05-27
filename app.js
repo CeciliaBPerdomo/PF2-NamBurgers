@@ -1,6 +1,7 @@
 import { leerArchivo, mostrarProductos, verMas } from "./js/productos.js"
 import { leerCategoria, mostrarCategorias, setearFiltros } from "./js/categorias.js"
 import { mostrarCarrito } from "./js/carrito.js"
+import { validarEmail, validarNombre, validarMensaje } from "./js/contacto.js"
 
 var catalogo = []
 var categoria = []
@@ -13,6 +14,18 @@ const navbar = document.querySelector("#navbar")
 const btnMenu = document.querySelector("#btnMenu")
 const btnCarrito = document.querySelector("#btnCarrito")
 const cart = document.getElementById("cart")
+
+
+// Formulario de contacto 
+// Seleccionamos elementos del DOM
+const loginForm = document.querySelector("#formulario");
+
+// Nombre y apellido
+const nombre = document.querySelector("#name");
+// Email
+const email = document.querySelector("#email");
+// Mensaje (TextArea)
+const mensaje = document.querySelector("#mensaje");
 
 // Productos
 catalogo = await leerArchivo()
@@ -58,3 +71,16 @@ btnCarrito.addEventListener("click", (e) => {
 
 
 mostrarCarrito()
+
+// Validar formulario de contacto
+email.addEventListener("input", (e) => {
+    validarEmail(e)
+})
+
+nombre.addEventListener("input", (e) => {
+    validarNombre(e)
+})
+
+mensaje.addEventListener("input", (e) => {
+    validarMensaje(e)
+})

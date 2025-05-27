@@ -11,7 +11,7 @@
         display: flex;
         padding: 1.5rem;
 
-        & h3 {
+        & h2 {
             text-align: center;
             align-self: center;
             font-size: 1.5rem;
@@ -38,36 +38,58 @@
         justify-content: center;
         align-items: center;
         align-content: center;
-        padding: 1rem;
+        padding: 1.75rem;
+        margin-top: 1rem;
 
         & p {
             font-size: 1.2rem;
             color: var(--text-primary);
         }
     }
+
     & form {
         width: 60%;
         text-align: center;
 
-        & input {
-            width: 100%;
-            background-color: transparent;
-            padding: 0.5rem;
-            margin-top: 1rem;
-            border-radius: 0.5rem;
-            border: 1px solid var(--botones-sec);
-            margin-left: 2rem;
-        }
+        & fieldset {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
 
-        & textarea {
-            width: 100%;
-            background-color: transparent;
-            padding: 0.5rem;
-            margin-top: 1rem;
-            border-radius: 0.5rem;
-            border: 1px solid var(--botones-sec);
-            margin-left: 2rem;
-            margin-bottom: 1rem;
+            & input,
+            & textarea {
+                width: 100%;
+                background-color: transparent;
+                padding: 0.5rem;
+                margin-top: 1rem;
+                border-radius: 0.5rem;
+                border: 1px solid var(--botones-sec);
+                margin-left: 2rem;
+                color: var(--text-primary);
+            }
+
+            & input.error,
+            & textarea.error {
+                border-color: var(--botones-sec);
+            }
+
+            & input.success,
+            & textarea.success {
+                border-color: green;
+            }
+
+            & output {
+                margin-left: 2rem;
+                font-size: 0.9rem;
+
+                &.error {
+                    color: var(--botones-sec);
+                }
+
+                &.success {
+                    color: green;
+                }
+            }
         }
 
         & button {
