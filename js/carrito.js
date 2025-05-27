@@ -55,7 +55,7 @@ export const mostrarCarrito = (catalogo) => {
         cartTotals.style.display = "flex"; 
         let subTotal = carrito.reduce((a, i) => (a += i.precio * i.cantidad), 0)
         subTotalCart.innerHTML = `$ ${Number(subTotal).toFixed(2)}`
-        shippingCart.innerHTML = `$ ${subTotal > 1000 ? "Free" : `${Number(subTotal * 0.2).toFixed(2)}`}`
+        shippingCart.innerHTML = `${subTotal > 1000 ? "Free" : `$ ${Number(subTotal * 0.2).toFixed(2)}`}`
         totalCart.innerHTML = subTotal > 1000 ? `$ ${Number(subTotal).toFixed(2)}` : `$ ${Number(subTotal + (subTotal * 0.2)).toFixed(2)}`
 
         carrito.forEach((i) => listCart.append(item(i, catalogo)))
