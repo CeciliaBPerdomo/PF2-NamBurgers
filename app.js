@@ -26,6 +26,9 @@ const nombre = document.querySelector("#name");
 const email = document.querySelector("#email");
 // Mensaje (TextArea)
 const mensaje = document.querySelector("#mensaje");
+const feedbackMensaje = document.querySelector("#feedbackMensaje");
+const feedbackName = document.querySelector("#feedbackName");
+const feedbackEmail = document.querySelector("#feedbackEmail");
 
 // Productos
 catalogo = await leerArchivo()
@@ -74,13 +77,30 @@ mostrarCarrito()
 
 // Validar formulario de contacto
 email.addEventListener("input", (e) => {
-    validarEmail(e)
+    validarEmail(e.target.value.trim(), e)
 })
 
 nombre.addEventListener("input", (e) => {
-    validarNombre(e)
+    validarNombre(e.target.value.trim(), e)
 })
 
 mensaje.addEventListener("input", (e) => {
-    validarMensaje(e)
+    validarMensaje(e.target.value.trim(), e)
+})
+
+loginForm.addEventListener("submit", (e) => {
+    e.preventDefault()
+
+    let emailValido = validarEmail(email.value.trim(), e)
+    let nombreValido = validarNombre(nombre.value.trim(), e)
+    let mensajeValido = validarMensaje(mensaje.value.trim(), e)
+
+    if (emailValido && nombreValido && mensajeValido) {
+        alert("Gracias por contactarnos, nos pondremos en contacto contigo a la brevedad.")
+        loginForm.reset()
+
+        feedbackMensaje.innerHTML = "";
+        feedbackName.innerHTML = "";
+        feedbackEmail.innerHTML = "";
+    }
 })
