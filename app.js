@@ -22,13 +22,15 @@ const loginForm = document.querySelector("#formulario");
 
 // Nombre y apellido
 const nombre = document.querySelector("#name");
+const feedbackName = document.querySelector("#feedbackName");
+
 // Email
 const email = document.querySelector("#email");
+const feedbackEmail = document.querySelector("#feedbackEmail");
+
 // Mensaje (TextArea)
 const mensaje = document.querySelector("#mensaje");
 const feedbackMensaje = document.querySelector("#feedbackMensaje");
-const feedbackName = document.querySelector("#feedbackName");
-const feedbackEmail = document.querySelector("#feedbackEmail");
 
 // Productos
 catalogo = await leerArchivo()
