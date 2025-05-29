@@ -9,11 +9,52 @@
 </head>
 
 <body>
-     <header id="navbar">
+    <header id="navbar">
         <a href="/" title="home">🍔 ÑamBurgers</a>
-     </header>
+    </header>
 
-    <h1>Registro</h1>
+    <main id="register">
+        <!-- Registro de usuario -->
+        <article id="content-register">
+            <h1>Bienvenid@, ¡te estabamos<span> esperando!!</span></h1>
+            <p>Completa el formulario con tus datos.</p>
+
+            <form id="register-form">
+                <fieldset>
+                    <label for="name">Nombre completo</label>
+                    <input type="text" id="name" name="name" placeholder="Ingrese su nombre" required>
+                </fieldset>
+                <fieldset>
+                    <label for="address">Dirección</label>
+                    <input type="text" id="address" name="address" placeholder="Ingrese su dirección" required>
+                </fieldset>
+                <fieldset>
+                    <label for="phone">Teléfono</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Ingrese su teléfono" required>
+                </fieldset>
+                <fieldset>
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="Ingrese su correo" required>
+                </fieldset>
+                <fieldset>
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required>
+                </fieldset>
+                <button>Registrarse</button>
+            </form>
+
+            <p id="login-link">
+                ¿Ya tienes cuenta? <a href="./inicio.html" id="login-link">Inicia sesión aquí</a>
+            </p>
+        </article>
+
+        <!-- Imagen de registro -->
+        <article id="card-image-register">
+            <picture>
+                <img src="./img/register.png" alt="ÑamBurgers">
+            </picture>
+        </article>
+    </main>
 </body>
 
 </html>
