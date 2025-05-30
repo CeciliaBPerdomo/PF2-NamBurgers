@@ -27,12 +27,16 @@
 
             <form id="login-form">
                 <fieldset>
-                    <label for="email">Correo electrónico</label>
+                    <label for="email">Correo electrónico
+                        <output id="feedbackEmail"></output>
+                    </label>
                     <input type="email" id="email" name="email" placeholder="Ingrese su correo" required>
                 </fieldset>
 
                 <fieldset>
-                    <label for="password">Contraseña</label>
+                    <label for="password">Contraseña
+                        <output id="feedbackPassword"></output>
+                    </label>
                     <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required>
                 </fieldset>
 
@@ -44,6 +48,8 @@
             </p>
         </article>
     </main>
+
+    <script type="module" src="./js/login.js"></script>
 </body>
 
 </html>

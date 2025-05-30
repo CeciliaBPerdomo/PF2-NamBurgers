@@ -214,6 +214,8 @@ const validarPassword = (e, valor) => {
     return true;
 }
 
+
+// Validación del formulario al enviar
 registerForm.addEventListener("submit", (e) => {
     e.preventDefault()
     const isNombreValido = validarNombre(e, nombre.value.trim());
