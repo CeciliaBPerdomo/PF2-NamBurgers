@@ -123,6 +123,8 @@ const validarPassword = (e, valor) => {
     return true;
 }
 
+
+// Validación del formulario al enviar
 loginForm.addEventListener("submit", (e) => {
     e.preventDefault()
     let valorEmail = email.value.trim();

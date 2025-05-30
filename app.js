@@ -6,6 +6,31 @@ import { validarEmail, validarNombre, validarMensaje } from "./js/contacto.js"
 var catalogo = []
 var categoria = []
 
+// Inicio de sesión
+const btnLogout = document.querySelector("#btnLogout");
+
+const inicioSesion = () => {
+    const usuarioGuardado = localStorage.getItem("usuario");
+    const authSection = document.querySelector("#usuario-login");
+
+    if (usuarioGuardado) {
+        const usuario = JSON.parse(usuarioGuardado);
+        authSection.innerHTML = `Hola 👋 <b>${usuario.nombre}</b>`;
+        document.querySelectorAll("#auth a").forEach(link => link.style.display = "none");
+    } else {
+       authSection.style.display = "none"; 
+       btnLogout.style.display = "none";
+    }
+}
+
+inicioSesion()
+
+btnLogout.addEventListener("click", (e) => {
+    e.preventDefault();
+    localStorage.removeItem("usuario");
+    location.assign("index.html");
+});
+
 // Productos
 const btnMore = document.querySelector("#btnMore")
 
