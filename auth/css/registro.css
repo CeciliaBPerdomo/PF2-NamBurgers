@@ -58,6 +58,19 @@ header {
                 & label {
                     font-size: 1rem;
                     font-weight: bold;
+                    padding: 0.175rem;
+
+                    & output {
+                        &.error {
+                            color: var(--botones-sec);
+                            font-weight: normal;
+                        }
+
+                        &.success {
+                            font-weight: normal;
+                            color: green;
+                        }
+                    }
                 }
 
                 & input {
