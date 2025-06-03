@@ -96,6 +96,31 @@
     }
 }
 
+#sabores {
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
+    color: #333;
+    z-index: 1;
+    overflow: hidden;
+    /* para que el efecto no se desborde */
+
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0%;
+        background-color: var(--third-bg);
+        z-index: -1;
+        animation: enterExit 3s ease-out forwards;
+    }
+}
+
+/* Responsive */
+/* Celulares */
 @media (max-width: 768px) {
     #hero {
         width: 100%;
@@ -103,7 +128,7 @@
         display: flex;
         justify-content: flex-start;
         align-content: flex-start;
-        
+
         padding: 1.25rem 0.5rem;
 
         & article {
@@ -129,13 +154,22 @@
             }
         }
 
-         & #card-hero {
+        & #card-hero {
             display: none;
+            animation: none !important;
+            transform: none !important;
+            opacity: 1 !important;
         }
     }
+
+    #sabores::before {
+        animation: none !important;
+    }
+
 }
 
-@media (min-width: 769px) and (max-width: 1100px)  {
+/* Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
     #hero {
         & article {
             padding: 1rem;
@@ -144,7 +178,14 @@
 
         & #card-hero {
             display: none;
+            animation: none !important;
+            transform: none !important;
+            opacity: 1 !important;
         }
+    }
+
+    #sabores::before {
+        animation: none !important;
     }
 }
 
@@ -174,29 +215,10 @@
     }
 }
 
-#sabores {
-    position: relative;
-    display: inline-block;
-    font-weight: 600;
-    color: #333;
-    z-index: 1;
-    overflow: hidden;
-    /* para que el efecto no se desborde */
-}
 
-#sabores::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 0%;
-    background-color: var(--third-bg);
-    z-index: -1;
-    animation: enterExit 3s ease-out forwards;
-}
 
-/* Animación que entra de izquierda a derecha y luego se recoge hacia la izquierda */
+/* Animación que entra de izquierda a derecha 
+y luego se recoge hacia la izquierda */
 @keyframes enterExit {
     0% {
         width: 0%;
