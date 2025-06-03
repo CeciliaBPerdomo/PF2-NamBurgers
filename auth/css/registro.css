@@ -128,3 +128,20 @@ header {
         }
     }
 }
+
+/* Responsive */
+/* Tablets y celulares*/
+@media (max-width: 1024px) {
+    #register {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    #register #card-image-register {
+        display: none;
+    }
+
+    #register #content-register {
+        width: 100%;
+    }
+}

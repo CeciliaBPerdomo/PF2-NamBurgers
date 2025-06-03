@@ -141,3 +141,30 @@
 #cart.active {
     transform: translateX(0);
 }
+
+/* Responsive */
+/* Tablets */
+@media (max-width: 1032px) {
+    #cart {
+        width: 40vw;
+    }
+}
+
+/* Celulares (≤ 768px) */
+@media (max-width: 768px) {
+    #cart {
+        width: 100vw;
+        padding: 1.5rem 1rem;
+        margin-top: 2rem;
+        z-index: 9;
+    }
+
+    #cart ul {
+        max-height: 50vh;
+    }
+
+    #cart footer {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

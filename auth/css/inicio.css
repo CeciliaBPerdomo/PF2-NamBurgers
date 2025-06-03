@@ -134,3 +134,41 @@ header {
         }
     }
 }
+
+
+/* Responsive */
+/* Tablets */
+@media (max-width: 1032px) {
+    #login {
+        flex-direction: column;
+    }
+
+    #login picture {
+        display: none;
+    }
+
+    #login article {
+        width: 100%;
+    }
+}
+
+/* Celulares (≤ 768px) */
+@media (max-width: 768px) {
+    #login {
+        margin-top: 2rem;
+        padding: 1rem;
+    }
+
+    #login article h1 {
+        font-size: 2rem;
+    }
+
+    #login article p {
+        font-size: 1rem;
+    }
+
+    #login article form button {
+        font-size: 1rem;
+        padding: 0.75rem;
+    }
+}
