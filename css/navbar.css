@@ -277,10 +277,6 @@ body:has(#cart.active)::before {
                     text-align: center;
                 }
 
-                & #user-info {
-                    display: none; 
-                }
-
                 & #navbar-icons {
                     flex-direction: row;
                     justify-content: flex-end;
