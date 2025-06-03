@@ -266,8 +266,20 @@ body:has(#cart.active)::before {
 
             & section {
                 display: flex;
-                justify-content: flex-end;
+                flex-direction: column;
+                align-items: center;
                 width: 100%;
+                gap: 0.5rem;
+
+
+                & a {
+                    width: 100%;
+                    text-align: center;
+                }
+
+                & #user-info {
+                    display: none; 
+                }
 
                 & #navbar-icons {
                     flex-direction: row;
