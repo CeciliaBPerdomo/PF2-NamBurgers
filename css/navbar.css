@@ -234,6 +234,10 @@ body:has(#cart.active)::before {
 }
 
 @media (max-width: 768px) {
+    #btnMenu {
+        display: flex !important;
+    }
+
     #header {
         display: flex;
         flex-direction: column;
@@ -250,6 +254,7 @@ body:has(#cart.active)::before {
             width: 100%;
             right: 0;
             padding: 1rem;
+            margin-top: 3rem;
         }
 
         & #navbar-right {
@@ -267,14 +272,13 @@ body:has(#cart.active)::before {
             & section {
                 display: flex;
                 flex-direction: column;
-                align-items: center;
+                align-items: flex-end;
                 width: 100%;
                 gap: 0.5rem;
 
-
                 & a {
+                    text-align: right;
                     width: 100%;
-                    text-align: center;
                 }
 
                 & #navbar-icons {
