@@ -25,7 +25,7 @@
                     <label for="name">Nombre completo
                         <output id="feedbackName"></output>
                     </label>
-                    <input type="text" id="name" name="name" placeholder="Ingrese su nombre" required>
+                    <input type="text" id="name" name="name" placeholder="Ingrese su nombre">
                 </fieldset>
 
                 <!-- Dirección -->
@@ -33,7 +33,7 @@
                     <label for="address">Dirección
                         <output id="feedbackAddress"></output>
                     </label>
-                    <input type="text" id="address" name="address" placeholder="Ingrese su dirección" required>
+                    <input type="text" id="address" name="address" placeholder="Ingrese su dirección">
                 </fieldset>
 
                 <!-- Telefono -->
@@ -41,7 +41,7 @@
                     <label for="phone">Teléfono
                         <output id="feedbackPhone"></output>
                     </label>
-                    <input type="number" id="phone" name="phone" placeholder="Ingrese su teléfono" required>
+                    <input type="number" id="phone" name="phone" placeholder="Ingrese su teléfono">
                 </fieldset>
 
                 <!-- Correo electrónico -->
@@ -49,7 +49,7 @@
                     <label for="email">Correo electrónico
                         <output id="feedbackEmail"></output>
                     </label>
-                    <input type="email" id="email" name="email" placeholder="Ingrese su correo" required>
+                    <input type="email" id="email" name="email" placeholder="Ingrese su correo">
                 </fieldset>
 
                 <!-- Contraseña -->
@@ -57,22 +57,26 @@
                     <label for="password">Contraseña
                         <output id="feedbackPassword"></output>
                     </label>
-                    <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required>
+                    <input type="password" id="password" name="password" placeholder="Ingrese su contraseña">
                 </fieldset>
 
+
+                <!-- Confirmar contraseña -->
+                <fieldset>
+                    <label for="confirm-password">Confirmar contraseña
+                        <output id="feedbackConfirmPassword"></output>
+                    </label>
+                    <input type="password" id="confirm-password" name="confirm-password"
+                        placeholder="Confirme su contraseña">
+                </fieldset>
+
+                <!-- Botón de registro -->
                 <button>Registrarse</button>
             </form>
 
             <p id="login-link">
                 ¿Ya tienes cuenta? <a href="./inicio.html" id="login-link">Inicia sesión aquí</a>
             </p>
-        </article>
-
-        <!-- Imagen de registro -->
-        <article id="card-image-register">
-            <picture>
-                <img src="./img/register.png" alt="ÑamBurgers">
-            </picture>
         </article>
     </main>
 

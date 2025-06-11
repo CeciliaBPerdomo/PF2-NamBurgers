@@ -4,7 +4,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    align-content: center;
     margin-top: 3rem;
 
     & header {
@@ -17,7 +16,6 @@
             font-size: 1.5rem;
         }
     }
-
 }
 
 #contact-form {
@@ -26,8 +24,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    align-content: center;
-
     background-color: var(--first-bg);
     overflow: hidden;
 
@@ -37,9 +33,9 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        align-content: center;
         padding: 1.75rem;
         margin-top: 1rem;
+        text-align: center;
 
         & p {
             font-size: 1.2rem;
@@ -49,9 +45,12 @@
 
     & form {
         width: 60%;
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         & fieldset {
+            width: 100%;
             display: flex;
             flex-direction: column;
             gap: 0.3rem;
@@ -61,11 +60,11 @@
                 width: 100%;
                 background-color: transparent;
                 padding: 0.5rem;
-                margin-top: 1rem;
+                margin: 1rem 0 0 0;
                 border-radius: 0.5rem;
                 border: 1px solid var(--botones-sec);
-                margin-left: 2rem;
                 color: var(--text-primary);
+                resize: none;
             }
 
             & input.error,
@@ -79,11 +78,11 @@
             }
 
             & output {
-                margin-left: 2rem;
+                margin: 0.5rem 0 0 0;
                 font-size: 0.9rem;
 
                 &.error {
-                    color: var(--botones-sec);
+                    color: var(--text-primary);
                 }
 
                 &.success {
@@ -94,7 +93,6 @@
 
         & button {
             width: 15rem;
-            text-align: center;
             padding: 0.5rem 2rem;
             border-radius: 0.75rem;
             background-color: var(--botones-sec);
@@ -106,8 +104,7 @@
             align-items: center;
             justify-content: center;
             gap: 0.5rem;
-            margin: auto;
-            margin-bottom: 1rem;
+            margin: 1rem auto;
             transition: transform 0.3s ease, fill 0.3s ease;
 
             & svg {
@@ -119,6 +116,14 @@
                 transform: scale(1.1);
                 box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
             }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #contact-form {
+        & form {
+            width: 80%;
         }
     }
 }

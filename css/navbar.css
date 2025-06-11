@@ -101,7 +101,8 @@
             gap: 1rem;
             align-items: center;
 
-            & #btnMenu {
+            & #btnMenu,
+            & #btnUser {
                 display: none;
             }
 
@@ -154,7 +155,8 @@ body:has(#cart.active)::before {
 
 /* RESPONSIVE */
 @media (max-width: 1032px) {
-    #btnMenu {
+    #btnMenu,
+    #btnUser {
         display: flex !important;
     }
 
@@ -212,13 +214,23 @@ body:has(#cart.active)::before {
             z-index: 9;
             padding: 1rem 2rem;
 
-            & section {
-                display: flex;
 
-                & #navbar-icons {
-                    flex: 1;
-                    flex-direction: row-reverse;
-                    justify-content: flex-start;
+            & #navbar-icons {
+                justify-content: flex-end;
+            }
+
+            & #auth {
+                display: none;
+            }
+
+            & #user-info {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                & #btnLogout {
+                    background-color: transparent;
+                    rotate: 180deg;
                 }
 
                 & a {
@@ -234,7 +246,8 @@ body:has(#cart.active)::before {
 }
 
 @media (max-width: 768px) {
-    #btnMenu {
+    #btnMenu,
+    #btnUser {
         display: flex !important;
     }
 
@@ -254,7 +267,7 @@ body:has(#cart.active)::before {
             width: 100%;
             right: 0;
             padding: 1rem;
-            margin-top: 3rem;
+            margin-top: 4rem;
         }
 
         & #navbar-right {
@@ -263,31 +276,22 @@ body:has(#cart.active)::before {
             height: auto;
             padding: 0;
             background-color: transparent;
-            border: none;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            justify-content: flex-end;
+            align-items: end;
             gap: 0.5rem;
+            flex-direction: column;
 
-            & section {
+            & #navbar-icons {
+                justify-content: flex-end;
+            }
+
+            & #user-info {
                 display: flex;
-                flex-direction: column;
-                align-items: flex-end;
-                width: 100%;
-                gap: 0.5rem;
 
-                & a {
-                    text-align: right;
-                    width: 100%;
-                }
-
-                & #navbar-icons {
-                    flex-direction: row;
-                    justify-content: flex-end;
-                }
-
-                & a {
-                    padding: 0 0.25rem;
+                & #btnLogout {
+                    background-color: transparent;
+                    rotate: 180deg;
                 }
             }
         }

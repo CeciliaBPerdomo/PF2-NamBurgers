@@ -13,8 +13,8 @@ export const agregarProducto = async (id, catalogo) => {
     if (!catalogo) {
         catalogo = await leerArchivo()
     }
-
     const producto = catalogo.find((p) => p.id == id)
+    alert(`${producto.nombre} agregad@ a tu carrito`)
     if (carrito.length == 0) {
         carrito.push({ ...producto, cantidad: 1 })
         localStorage.setItem("carrito", JSON.stringify(carrito))
@@ -50,9 +50,9 @@ export const mostrarCarrito = (catalogo) => {
             </section>
         </li>
     `;
-    cartTotals.style.display = "none";
+        cartTotals.style.display = "none";
     } else {
-        cartTotals.style.display = "flex"; 
+        cartTotals.style.display = "flex";
         let subTotal = carrito.reduce((a, i) => (a += i.precio * i.cantidad), 0)
         subTotalCart.innerHTML = `$ ${Number(subTotal).toFixed(2)}`
         shippingCart.innerHTML = `${subTotal > 1000 ? "Free" : `$ ${Number(subTotal * 0.2).toFixed(2)}`}`

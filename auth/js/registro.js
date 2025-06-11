@@ -31,6 +31,9 @@ var feedbackEmail = document.querySelector("#feedbackEmail");
 var password = document.querySelector("#password");
 var feedbackPassword = document.querySelector("#feedbackPassword");
 
+// Confirmacion de contraseña
+var confirmPassword = document.querySelector("#confirm-password");
+var feedbackConfirmPassword = document.querySelector("#feedbackConfirmPassword");
 
 // Validación de formulario
 nombre.addEventListener("input", (e) => {
@@ -51,6 +54,11 @@ email.addEventListener("input", (e) => {
 
 password.addEventListener("input", (e) => {
     validarPassword(e, e.target.value.trim());
+})
+
+// Validación de confirmación de contraseña
+confirmPassword.addEventListener("input", (e) => {
+    validarConfirmacionPassword(e, e.target.value.trim());
 })
 
 // Validación del nombre
@@ -214,6 +222,41 @@ const validarPassword = (e, valor) => {
     return true;
 }
 
+// Validación de confirmación de contraseña
+const validarConfirmacionPassword = (e, valor) => {
+if (valor.length == 0) {
+        feedbackConfirmPassword.classList.remove("success")
+        feedbackConfirmPassword.classList.remove("error")
+        feedbackConfirmPassword.classList.add("error")  
+        e.target.classList.remove("success")
+        e.target.classList.remove("error")  
+        e.target.classList.add("error")
+        feedbackConfirmPassword.innerHTML = "❌ Debe tener al menos 6 caracteres"
+        return false
+    }
+
+    if (valor !== password.value.trim()) {
+        feedbackConfirmPassword.classList.remove("success")
+        feedbackConfirmPassword.classList.remove("error")
+        feedbackConfirmPassword.classList.add("error")
+
+        e.target.classList.remove("success")
+        e.target.classList.remove("error")
+        e.target.classList.add("error")
+
+        feedbackConfirmPassword.innerHTML = "❌ Las contraseñas no coinciden"
+        return false
+    }
+    feedbackConfirmPassword.classList.remove("success")
+    feedbackConfirmPassword.classList.remove("error")
+    feedbackConfirmPassword.classList.add("success")
+
+    e.target.classList.remove("success")
+    e.target.classList.remove("error")
+    e.target.classList.add("success")
+    feedbackConfirmPassword.innerHTML = "✔️ Contraseña confirmada"
+    return true;
+}
 
 // Validación del formulario al enviar
 registerForm.addEventListener("submit", (e) => {
@@ -223,8 +266,9 @@ registerForm.addEventListener("submit", (e) => {
     const isTelefonoValido = validarTelefono(e, telefono.value.trim());
     const isEmailValido = validarEmail(e, email.value.trim());
     const isPasswordValida = validarPassword(e, password.value.trim());
+    const isConfirmacionPasswordValida = validarConfirmacionPassword(e, confirmPassword.value.trim());
     
-    if (isNombreValido && isDireccionValida && isTelefonoValido && isEmailValido && isPasswordValida) {
+    if (isNombreValido && isDireccionValida && isTelefonoValido && isEmailValido && isPasswordValida && isConfirmacionPasswordValida) {
         const nuevoUsuario = {
             nombre: nombre.value.trim(),
             direccion: direccion.value.trim(),

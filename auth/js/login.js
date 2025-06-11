@@ -24,7 +24,6 @@ const feedbackEmail = document.querySelector("#feedbackEmail");
 const password = document.querySelector("#password");
 const feedbackPassword = document.querySelector("#feedbackPassword");
 
-
 // Validación de formulario
 email.addEventListener("input", (e) => {
     validarEmail(e, e.target.value.trim());

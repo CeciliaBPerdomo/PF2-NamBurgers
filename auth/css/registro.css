@@ -16,7 +16,7 @@ header {
 }
 
 #register {
-    width: 70%;
+    width: 95%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -26,7 +26,7 @@ header {
     border-radius: 1rem;
 
     & #content-register {
-        width: 50%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -47,8 +47,8 @@ header {
         }
 
         & #register-form {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
             gap: 1rem;
 
             & fieldset {
@@ -82,6 +82,7 @@ header {
             }
 
             & button {
+                grid-column: span 2;
                 background-color: var(--botones-sec);
                 color: white;
                 font-size: 1rem;
@@ -112,21 +113,6 @@ header {
         }
     }
 
-    & #card-image-register {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 1rem;
-        gap: 1rem;
-        color: white;
-
-        & picture {
-            & img {
-                object-fit: cover;
-            }
-        }
-    }
 }
 
 /* Responsive */
@@ -143,5 +129,15 @@ header {
 
     #register #content-register {
         width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    #register #content-register #register-form {
+        grid-template-columns: 1fr;
+
+        & button {
+            grid-column: span 1;
+        }
     }
 }

@@ -17,7 +17,7 @@ export const mostrarProductos = (catalogo, filtro) => {
         // muestra los 3 primeros
         lista = catalogo.slice(0, page * 3)
     } else if (filtro == "todas") {
-        lista = catalogo.slice(0, page * 3)
+        lista = catalogo.slice(0, 3)
     } else {
         lista = catalogo.filter((producto) => producto.categoria == filtro)
     }
@@ -64,7 +64,7 @@ const tarjetaProducto = (producto, catalogoProductos) => {
 export const verMas = (e, catalogo) => {
     e.preventDefault()
     page += 1
-    if (page == 4) {
+    if (page >= 4) {
         page = 4
         btnMore.style.display = "none"
     }

@@ -8,18 +8,24 @@ var categoria = []
 
 // Inicio de sesión
 const btnLogout = document.querySelector("#btnLogout");
+const btnUser = document.querySelector("#btnUser")
+
+btnUser.addEventListener("click", () => {
+    location.assign("/auth/inicio.html")
+})
 
 const inicioSesion = () => {
     const usuarioGuardado = localStorage.getItem("usuario");
     const authSection = document.querySelector("#usuario-login");
 
     if (usuarioGuardado) {
+        btnUser.style.visibility = "hidden";
         const usuario = JSON.parse(usuarioGuardado);
         authSection.innerHTML = `Hola 👋 <b>${usuario.nombre}</b>`;
         document.querySelectorAll("#auth a").forEach(link => link.style.display = "none");
     } else {
-       authSection.style.display = "none"; 
-       btnLogout.style.display = "none";
+        authSection.style.display = "none";
+        btnLogout.style.display = "none";
     }
 }
 
@@ -29,6 +35,7 @@ btnLogout.addEventListener("click", (e) => {
     e.preventDefault();
     localStorage.removeItem("usuario");
     location.assign("index.html");
+    btnUser.style.display = "flex"
 });
 
 // Productos
