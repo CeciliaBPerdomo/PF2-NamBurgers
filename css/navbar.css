@@ -24,6 +24,11 @@
         display: flex;
         gap: 1rem;
 
+        & #btnMenu,
+        #btnUser {
+            display: flex !important;
+        }
+
         & a {
             color: var(--text-primary);
             font-weight: 400;
@@ -129,6 +134,23 @@
             }
         }
     }
+
+    & #user-info {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        & #btnLogout {
+            background-color: transparent;
+            rotate: 180deg;
+        }
+    }
+
+    & #navbar-icons {
+        & #btnCarrito {
+            margin-right: 0.5rem;
+        }
+    }
 }
 
 body::before {
@@ -155,6 +177,7 @@ body:has(#cart.active)::before {
 
 /* RESPONSIVE */
 @media (max-width: 1032px) {
+
     #btnMenu,
     #btnUser {
         display: flex !important;
@@ -246,6 +269,7 @@ body:has(#cart.active)::before {
 }
 
 @media (max-width: 768px) {
+
     #btnMenu,
     #btnUser {
         display: flex !important;
